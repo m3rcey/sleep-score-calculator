@@ -30,13 +30,13 @@ export function CalculatorForm({
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
-          <Moon className="w-8 h-8 text-primary-600" />
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-500/20 rounded-full mb-4">
+          <Moon className="w-8 h-8 text-primary-400" />
         </div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
           Smart Sleep Score
         </h1>
-        <p className="text-gray-600 text-sm sm:text-base">
+        <p className="text-gray-400 text-sm sm:text-base">
           Calculate the ROI of investing in better sleep
         </p>
       </div>
@@ -47,11 +47,11 @@ export function CalculatorForm({
           <DollarSign className="w-5 h-5 text-primary-600" />
           Annual Income
         </label>
-        <p className="text-sm text-gray-500 mb-3">
+        <p className="text-sm text-gray-400 mb-3">
           Used to calculate productivity impact
         </p>
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-lg font-semibold">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg font-semibold">
             $
           </span>
           <input
@@ -71,17 +71,17 @@ export function CalculatorForm({
       {/* Sleep Disruptors */}
       <div className="card">
         <label className="section-title flex items-center gap-2">
-          <Bed className="w-5 h-5 text-primary-600" />
+          <Bed className="w-5 h-5 text-primary-400" />
           Sleep Issues Affecting You
         </label>
-        <p className="text-sm text-gray-500 mb-4">
+        <p className="text-sm text-gray-400 mb-4">
           Select all that apply to calculate your sleep costs
         </p>
         <div className="space-y-3">
           {SLEEP_DISRUPTORS.map((disruptor) => (
             <label
               key={disruptor.id}
-              className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 cursor-pointer transition-colors"
+              className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-700 cursor-pointer transition-colors"
             >
               <input
                 type="checkbox"
@@ -92,14 +92,14 @@ export function CalculatorForm({
               />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="font-medium text-gray-900 text-sm sm:text-base">
+                  <span className="font-medium text-white text-sm sm:text-base">
                     {disruptor.label}
                   </span>
-                  <span className="text-primary-600 font-semibold text-sm whitespace-nowrap">
+                  <span className="text-primary-400 font-semibold text-sm whitespace-nowrap">
                     +{formatCurrency(disruptor.cost)}/yr
                   </span>
                 </div>
-                <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">
+                <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">
                   {disruptor.description}
                 </p>
               </div>
@@ -111,14 +111,14 @@ export function CalculatorForm({
       {/* Caffeine Spending */}
       <div className="card">
         <label className="section-title flex items-center gap-2">
-          <Coffee className="w-5 h-5 text-primary-600" />
+          <Coffee className="w-5 h-5 text-primary-400" />
           Monthly Caffeine Spending
         </label>
-        <p className="text-sm text-gray-500 mb-3">
+        <p className="text-sm text-gray-400 mb-3">
           Coffee, energy drinks, supplements to combat fatigue
         </p>
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-lg font-semibold">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg font-semibold">
             $
           </span>
           <input
@@ -133,7 +133,7 @@ export function CalculatorForm({
             aria-label="Monthly caffeine spending"
           />
         </div>
-        <p className="text-xs text-gray-400 mt-2">
+        <p className="text-xs text-gray-500 mt-2">
           Default: $75/month (~$2.50/day)
         </p>
       </div>
@@ -141,14 +141,14 @@ export function CalculatorForm({
       {/* Mattress Price */}
       <div className="card">
         <label className="section-title flex items-center gap-2">
-          <Bed className="w-5 h-5 text-primary-600" />
+          <Bed className="w-5 h-5 text-primary-400" />
           Smart Mattress Investment
         </label>
-        <p className="text-sm text-gray-500 mb-3">
+        <p className="text-sm text-gray-400 mb-3">
           Price of the smart mattress you&apos;re considering
         </p>
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-lg font-semibold">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg font-semibold">
             $
           </span>
           <input
@@ -163,7 +163,7 @@ export function CalculatorForm({
             aria-label="Mattress price"
           />
         </div>
-        <p className="text-xs text-gray-400 mt-2">
+        <p className="text-xs text-gray-500 mt-2">
           Default: {formatCurrency(DEFAULT_MATTRESS_PRICE)} (average smart mattress)
         </p>
       </div>
